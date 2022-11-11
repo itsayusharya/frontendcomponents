@@ -8,7 +8,7 @@ searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
   users.forEach((user) => {
     const isVisible = user.name.includes(value) || user.email.includes(value);
-    user.element.classList.toggle("hide", isVisible);
+    user.element.classList.toggle("hide", !isVisible);
   });
 });
 
